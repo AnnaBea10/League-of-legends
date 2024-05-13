@@ -10,4 +10,12 @@ public record Champion(
 		
 		) {
 	
+	public String generateContextByQuestion(String question) {
+		return """
+				Pergunta : %s
+				Nome do personagem: %s
+				Função : %s
+				Lore(História) : %s
+				""".formatted(question, this.name, this.role, this.lore);
+	}
 }
